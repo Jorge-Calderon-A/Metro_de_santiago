@@ -3,10 +3,10 @@ print("¿Que información necesitas llevar a SAP?")
 print("1. Aviso (IW21)")
 print("2. Orden de mantenimiento (IW31)")
 seleccion= input("Selecciona una opción (1 o 2):")
-if seleccion == "1":
-    print("Perfecto, vamos a redactar el aviso para SAP.")
+if seleccion == "2":
+    print("Perfecto, vamos a redactar la orden para SAP.")
     print("Recuerda que debes describir el problema de manera clara y concisa, sin errores ortograficos.")
-    mac_o_mpl=input("¿El aviso es para un MAC (1) o un MPL(2)?:")
+    mac_o_mpl=input("¿La orden es para un MAC (1) o un MPL(2)?:")
     if mac_o_mpl < "1" or mac_o_mpl > "2":
         print("Opción no valida. porfavor selcciona una opción valida.")
     if mac_o_mpl == "1":
@@ -89,6 +89,67 @@ if seleccion == "1":
     -------------------Observaciones--------------------------
     {observacion_mac}
     ----------------------------------------------------------"""
+
+    if mac_o_mpl == "2":
+        print("Seleccionaste MPL. Por favor, completa la información correspondiente para MPL.")
+        estacion_mpl= input("¿Cuál es la estación de trabajo involucrada?:")
+        print("Perfecto, la estación es", estacion_mpl)
+        print("¿En qué recinto se realizo el mantenimiento?")
+        print("- SAF V1")
+        print("- SAF V2")
+        print("- SER")
+        print("- Vías")
+        recinto_mpl= input("Selecciona una opción:")
+        if recinto_mpl != "SAF V1" and recinto_mpl != "SAF V2" and recinto_mpl != "SER" and recinto_mpl != "Vías":
+            print("Opción no valida. porfavor selecciona una opción valida.")
+        else:
+            print("Seleccionaste", recinto_mpl)
+        equipo_mpl= input ("¿Cuál es el equipo involucrado?:")
+        problema_mpl= input("Describe el problema encontrado:")
+        mantenimiento_equpo_mpl= input("¿Qué tipo de mantenimiento se realizó?:")
+        solucion_mpl= input("¿Cuál fue la solución aplicada?:")
+        inspectores_mpl= input("¿Quién realizó la inspección?:")
+        supervisor_mpl= input("¿Quién es el supervisor a cargo?:")
+        tecnicos_mpl= input("¿Quiénes son los técnicos involucrados?:")
+        empresa_contratista_mpl= input("¿Cuál es la empresa contratisa?:")
+        om_mpl= input("¿Cuál es la orden de mantenimiento asociada (si aplica)?:")
+        fecha_mpl= input("¿Cuál es la fecha del aviso (DD/MM/AAAA)?:")
+        hora_mpl= input("¿Cuál es la hora del aviso (HH:MM)?:")
+        semana_mpl= input("¿Cuál es la semana del aviso (Número de semana)?:")
+        turno_mpl= input("¿Cuál es el turno del aviso (Mañana/Tarde/Noche)?:")
+        actividad_mpl= input("¿Cuál es la actividad realizada?:")
+        observacion_mpl= input("¿Se encuentran observaciones adicionales?:")
+        print("¡Gracias! Has completado la información para el aviso en SAP.")
+
+        #******************Informe final de orden OM05 MPL******************************
+        informe_orden_mpl = f"""
+        Informe de la Orden para SAP - MPL    
+        -----------------------------------
+        Semana: {semana_mpl}
+        Fecha: {fecha_mpl}
+        Hora de inicio: {hora_mpl}
+        Hora de término: {hora_mpl}
+        Turno: {turno_mpl}
+        Actividad realizada: {actividad_mpl}
+        Estación de trabajo: {estacion_mpl}
+        Recinto: {recinto_mpl}
+        Equipo involucrado: {equipo_mpl}
+        Problema encontrado: {problema_mpl}
+        Inspector: {inspectores_mpl}
+        Empresa contratista: {empresa_contratista_mpl}
+        Supervisor a cargo: {supervisor_mpl}
+        Tecnicos involucrados: {tecnicos_mpl}
+        Orden de mantenimiento asociada: {om_mpl}
+        ---------Resumen de la Inspección y Mantenimiento---------
+        Se realiza inspección tecnica a {actividad_mpl} en la estación {estacion_mpl} ubicada en el recinto {recinto_mpl}. 
+        El supervisor a cargo de {empresa_contratista_mpl} es {supervisor_mpl} junto a {tecnicos_mpl} técnicos.
+        Los equipos inspeccionados son {equipo_mpl}.
+        Durante la inspección se detectó el siguiente problema: {problema_mpl}.
+        Se llevó a cabo un mantenimiento de tipo {mantenimiento_equpo_mpl} y se aplicó la siguiente solución: {solucion_mpl}.
+        La OM asociada a este mantenimiento correctivo es {om_mpl}
+        -------------------Observaciones--------------------------
+        {observacion_mpl}
+        ----------------------------------------------------------"""
 
     print("En que formato necesitas el informe?")
     seleccion_formato_mac=input("" \
