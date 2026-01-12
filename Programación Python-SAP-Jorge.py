@@ -6,7 +6,7 @@ seleccion= input("Selecciona una opción (1 o 2):")
 if seleccion == "2":
     print("Perfecto, vamos a redactar la orden para SAP.")
     print("Recuerda que debes describir el problema de manera clara y concisa, sin errores ortograficos.")
-    mac_o_mpl=input("¿El aviso es para un MAC (1) o un MPL(2)?:")
+    mac_o_mpl=input("¿La orden es para un MAC (1) o un MPL(2)?:")
     if mac_o_mpl < "1" or mac_o_mpl > "2":
         print("Opción no valida. porfavor selcciona una opción valida.")
     if mac_o_mpl == "1":
