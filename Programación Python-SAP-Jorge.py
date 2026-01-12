@@ -95,6 +95,7 @@ if seleccion == "2":
     -------------------Observaciones--------------------------
     {observacion_mac}
     ----------------------------------------------------------"""
+    print(informe_aviso_mac)
 
 
     
