@@ -97,6 +97,14 @@ if seleccion == "2":
     ----------------------------------------------------------"""
     print(informe_aviso_mac)
 
+    #-----------------------------------------------------Pasar a selección 1-------------
+
+    if mac_o_mpl < "1" or mac_o_mpl > "2":
+        print("Opción no valida. porfavor selcciona una opción valida.")
+    if mac_o_mpl == "2":
+        print("Seleccionaste MPL.")
+    estacion_mpl= input("¿Cuál es la estación de trabajo involucrada?:")
+    print("Perfecto, la estación es", estacion_mpl)
 
     
 
