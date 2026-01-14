@@ -8,6 +8,6 @@ Por ello he creado un script en Python para optimizar el tiempo y desarrollar ma
 
 A continuación se presenta un video donde explico la estructura del prototipo del script: https://youtu.be/0GT6-NxFWiw
 
-A la fecha el script se ecnuentra finalizado.
+A la fecha el script se encuentra finalizado.
 
 
