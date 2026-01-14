@@ -1,4 +1,11 @@
-print("¡Hola!")          #Saludo inicial del programa 
+from datetime import datetime
+saludo_inicial = datetime.now().hour
+if 5 <= saludo_inicial < 12:
+    print("Hola, buenos días")
+elif 12 <= saludo_inicial < 18:
+    print("Hola, buenas tardes")
+else:
+    print("Hola, buenas noches")                                 #Saludo inicial del programa 
 print("¿Que información necesitas llevar a SAP?")                #Pregunta inciial para saber que tipo de transacción se va a realizar
 print("1. Aviso (IW21)")                                         #Opción de aviso, transacción IW21 en SAP
 print("2. Orden de mantenimiento (IW31)")                        #Opción de orden, transacción IW31 en SAP PM
