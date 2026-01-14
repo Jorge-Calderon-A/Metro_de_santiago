@@ -173,8 +173,8 @@ elif seleccion == "1":
     Informe del Aviso para SAP
     -----------------------------------
     Estación de trabajo: {estacion_aviso}
-    Equipo involucrado: {equipo_aviso}
-    ---------Resumen del Aviso---------
+    Equipos involucrados: {equipo_aviso}
+    ---------Resumen---------
     {resumen_aviso}
     ----------------------------------------------------------
     """)
