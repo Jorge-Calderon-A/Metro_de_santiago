@@ -108,7 +108,7 @@ if seleccion == "2":
             print("Opción no valida. porfavor selecciona una opción valida.")
         else:
             print("Seleccionaste", recinto_mpl)
-            semana_mpl = input("¿Cuál es la semana de mantenimiento?:")
+            semana_mpl = input("¿Cuál es la semana de mantenimiento? (Si es del 1 al 9, debe escribir 0 antes):")
             dia_mpl = input("¿Cuál es el dia del mantenimiento?:")
             fecha = input ("¿Cuál es la fecha del mantenimiento (DD/MM/AAAA)?:")
             hora_inicio_mpl= input("¿Cuál es la hora de inicio del mantenimiento (HH:MM)?:")
