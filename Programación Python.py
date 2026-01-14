@@ -1,15 +1,15 @@
-print("¡Hola!")
-print("¿Que información necesitas llevar a SAP?")
-print("1. Aviso (IW21)")
-print("2. Orden de mantenimiento (IW31)")
-seleccion= input("Selecciona una opción (1 o 2):")
-if seleccion == "2":
-    print("Perfecto, vamos a redactar la orden para SAP.")
+print("¡Hola!")          #Saludo inicial del programa 
+print("¿Que información necesitas llevar a SAP?")                #Pregunta inciial para saber que tipo de transacción se va a realizar
+print("1. Aviso (IW21)")                                         #Opción de aviso, transacción IW21 en SAP
+print("2. Orden de mantenimiento (IW31)")                        #Opción de orden, transacción IW31 en SAP PM
+seleccion= input("Selecciona una opción (1 o 2):")               #En este input se selcciona la transacción, el usuario puede selccionar 1 o 2
+if seleccion == "2":                                                                                              #************Este bloque es en caso de que el usuario selccione la opcion 2**********
+    print("Perfecto, vamos a redactar la orden para SAP.")                   
     print("Recuerda que debes describir el problema de manera clara y concisa, sin errores ortograficos.")
     mac_o_mpl=input("¿La orden es para un MAC (1) o un MPL(2)?:")
     if mac_o_mpl < "1" or mac_o_mpl > "2":
         print("Opción no valida. porfavor selcciona una opción valida.")
-    if mac_o_mpl == "1":
+    if mac_o_mpl == "1": 
         print("Seleccionaste MAC.")
         estacion_mac= input("¿Cuál es la estación de trabajo involucrada?:")
         print("Perfecto, la estación es", estacion_mac)
@@ -174,9 +174,9 @@ elif seleccion == "1":
     -----------------------------------
     Estación de trabajo: {estacion_aviso}
     Equipos involucrados: {equipo_aviso}
-    ---------Resumen---------
+    ------------Resumen----------------
     {resumen_aviso}
-    ----------------------------------------------------------
+    -----------------------------------
     """)
     print(informe_aviso)
 
