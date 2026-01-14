@@ -25,7 +25,7 @@ if seleccion == "2":
             print("Seleccionaste", recinto_mc)
         equipo_mac= input ("¿Cuál es el equipo involucrado?:")
         problema_mac= input ("¿Cuál es el problema encontrado anteirormente por el equipo?:")
-        mantenimiento_equpo_mac= input("¿Qué tipo de mantenimiento se realizó?:")
+        mantenimiento_equipo_mac= input("¿Qué tipo de mantenimiento se realizó?:")
         solucion_mac= input("¿Cuál fue la solución aplicada?:")
         inspectores_mac= input("¿Quién realizó la inspección?:")
         supervisor_mac= input("¿Quién es el supervisor a cargo?:")
@@ -114,3 +114,74 @@ if seleccion == "2":
             hora_inicio_mpl= input("¿Cuál es la hora de inicio del mantenimiento (HH:MM)?:")
             hora_termino_mpl= input("¿Cuál es la hora de término del mantenimiento (HH:MM)?:")
             turno_mpl= input("¿Cuál es el turno del mantenimiento (Mañana/Tarde/Noche)?:")
+            manteniminto_mpl = input("¿Cuál es el mantenimiento realizado?:")
+            equipo_mpl= input ("¿Cuál(es)  es o son los equipos involucrado(s)?:")
+            orden_mpl= input("¿Cuál es la orden de mantenimiento asociada (si aplica)?:")
+            empresa_mpl= input("¿Cuál es la empresa contratista?:")
+            supervisor_mpl= input("¿Quién es el supervisor a cargo?:")
+            tecnicos_mpl= input("¿Quiénes son los técnicos involucrados en numeros?:")
+            inspectores_mpl = input("¿Quién realizó la inspección?:")
+            resumen_mpl= input ("Resume la inspección, esto aparecera como el resumen general de la orden en SAP:")
+            observacion_mpl= input("¿Se encuentran observaciones adicionales?:")
+            print("¡Gracias! Has completado la información para el aviso en SAP.")
+
+            #************************Informe final de orden OM5 MPL******************************
+            from textwrap import dedent
+            informe_orden_mpl = dedent(f"""\
+            Informe de la Orden de Mantenimiento para SAP - MPL
+            -----------------------------------
+            Semana: {semana_mpl}
+            Día: {dia_mpl}
+            Fecha: {fecha}
+            Hora de inicio: {hora_inicio_mpl}
+            Hora de término: {hora_termino_mpl}
+            Turno: {turno_mpl}
+            Actividad realizada: {manteniminto_mpl} 
+            Estación de trabajo: {estacion_mpl} 
+            Recinto: {recinto_mpl}
+            Equipo(s) involucrado(s): {equipo_mpl}
+            Inspector: {inspectores_mpl}
+            Empresa contratista: {empresa_mpl}
+            Supervisor a cargo: {supervisor_mpl}
+            Técnicos involucrados: {tecnicos_mpl}
+            Orden de mantenimiento asociada: {orden_mpl}
+            ---------Resumen de la Inspección y Mantenimiento---------
+            {resumen_mpl}   
+            -------------------Observaciones--------------------------
+            {observacion_mpl}
+            ----------------------------------------------------------
+            """)
+            print(informe_orden_mpl)
+
+elif seleccion == "1":
+    print("Perfecto, vamos a redactar el aviso para SAP.")
+    print("Recuerda que debes describir el problema de manera clara y concisa, sin errores ortograficos. Este aviso puede ser para MAC o MPL.")
+    estacion_aviso= input("¿Cuál es la estación de trabajo involucrada?:")
+    print("Perfecto, la estación es", estacion_aviso)
+    equipo_aviso= input ("¿Cuál es el equipo involucrado?:")
+    resumen_aviso= input ("Resume el aviso, esto aparecera como el resumen general del aviso en SAP:")
+    print("¡Gracias! Has completado la información para el aviso en SAP.")
+    print("Resumen del aviso:")
+    print("Tipo de aviso:", tipo_aviso)
+    print("Estación de trabajo:", estacion_aviso)
+    print("Resumen del aviso:", resumen_aviso)
+    print("Equipo involucrado:", equipo_aviso)
+    print("¡Listo para ingresar el aviso en SAP!")
+
+    #*******************Informe final de Aviso IW21******************************
+    from textwrap import dedent
+    informe_aviso = dedent(f"""\
+    Informe del Aviso para SAP
+    -----------------------------------
+    Estación de trabajo: {estacion_aviso}
+    Equipo involucrado: {equipo_aviso}
+    ---------Resumen del Aviso---------
+    {resumen_aviso}
+    ----------------------------------------------------------
+    """)
+
+else:
+    print("Opción no valida. porfavor selecciona una opción valida.")
+
+
+
