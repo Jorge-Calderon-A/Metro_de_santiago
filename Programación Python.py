@@ -8,7 +8,8 @@ else:
     print("Hola, buenas noches")                                 #Saludo inicial del programa 
 print("¿Que información necesitas llevar a SAP?")                #Pregunta inciial para saber que tipo de transacción se va a realizar
 print("1. Aviso (IW21)")                                         #Opción de aviso, transacción IW21 en SAP
-print("2. Orden de mantenimiento (IW31)")                        #Opción de orden, transacción IW31 en SAP PM
+print("2. Orden de mantenimiento (IW31)")     
+print("3. Elementos de energía eléctrica")                   #Opción de orden, transacción IW31 en SAP PM
 seleccion= input("Selecciona una opción (1 o 2):")               #En este input se selcciona la transacción, el usuario puede selccionar 1 o 2
 if seleccion == "2":                                                                                              #************Este bloque es en caso de que el usuario selccione la opcion 2**********
     print("Perfecto, vamos a redactar la orden para SAP.")                   
@@ -186,6 +187,16 @@ elif seleccion == "1":
     -----------------------------------
     """)
     print(informe_aviso)
+
+elif seleccion == "3":
+    print("Perfecto. ¿Que quieres saber sobre los elementos de energía eléctrica?")
+
+    print("1. Reportes A2 mas comunes")
+    print("2. Tipos de discordancias eléctricas")
+    print("3. Elementos de energia eléctrica por recintos")
+    print("4. Procedimientos de seguridad para trabajos de energía eléctrica (segun normativa Metro)")
+    print("5. Procedimientos de mantenimientos")
+
 
 else:
     print("Opción no valida. porfavor selecciona una opción valida.")
