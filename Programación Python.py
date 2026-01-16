@@ -190,5 +190,6 @@ elif seleccion == "1":
 else:
     print("Opción no valida. porfavor selecciona una opción valida.")
 
-
+print("Pulsa cualquier letra para finalizar el programa.")
+finalizar = input()
 
