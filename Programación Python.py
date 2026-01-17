@@ -6,7 +6,7 @@ elif 12 <= saludo_inicial < 18:
     print("Hola, buenas tardes")
 else:
     print("Hola, buenas noches")                                 #Saludo inicial del programa 
-print("¿Que información necesitas llevar a SAP?")                #Pregunta inciial para saber que tipo de transacción se va a realizar
+print("Bienvenido, selecciona una opción")                #Pregunta inciial para saber que tipo de transacción se va a realizar
 print("1. Aviso (IW21)")                                         #Opción de aviso, transacción IW21 en SAP
 print("2. Orden de mantenimiento (IW31)")     
 print("3. Elementos de energía eléctrica")                   #Opción de orden, transacción IW31 en SAP PM
@@ -58,7 +58,7 @@ if seleccion == "2":                                                            
         print("Recinto:", recinto_mc)
         print("Equipo involucrado:", equipo_mac)
         print("Problema encontrado:", problema_mac)
-        print("Tipo de mantenimiento realizado:", mantenimiento_equpo_mac)
+        print("Tipo de mantenimiento realizado:", mantenimiento_equipo_mac)
         print("Solución aplicada:", solucion_mac)
         print("Inspector:", inspectores_mac)
         print("Supervisor a cargo:", supervisor_mac)
@@ -196,6 +196,7 @@ elif seleccion == "3":
     print("3. Elementos de energia eléctrica por recintos")
     print("4. Procedimientos de seguridad para trabajos de energía eléctrica (segun normativa Metro)")
     print("5. Procedimientos de mantenimientos")
+    print("6. Sistemas de talleres")
 
 
 else:
