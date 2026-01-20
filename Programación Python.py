@@ -130,35 +130,12 @@ if seleccion == "2":                                                            
         """)
                                     
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         print("¿Cual informe desea generar?"\
               "1"\
-              "2"\
-              "3"\
-              "4")
+              "2"\)
 
         informe_mac_seleccion= input("Selecciona una opción (1, 2, 3 o 4):")
-        if informe_mac_seleccion != "1" and informe_mac_seleccion != "2" and informe_mac_seleccion != "3" and informe_mac_seleccion != "4":
+        if informe_mac_seleccion != "1" and informe_mac_seleccion != "2":
             print("Opción no valida. porfavor selecciona una opción valida.")
         if informe_mac_seleccion == "1":        #Se imprime el informe 1
             print(informe_aviso_mac1)           #Imprimir informe 1
