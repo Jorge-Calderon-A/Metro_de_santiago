@@ -10,6 +10,4 @@ A continuación se presenta un video donde explico la estructura del prototipo d
 
 Como se menciona anteriormente, el script no contiene información confidencial, debilidades para interpretar datos de la empresa, personas, objetos y lugares.
 
-A la fecha el script se encuentra finalizado, se puede encontrar en el documento .py adjuntado (Programación Python.py).d
-
-
+A la fecha el script se encuentra finalizado, se puede encontrar en el documento .py adjuntado (Programación Python.py).
